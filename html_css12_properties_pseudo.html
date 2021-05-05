@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pseudo</title>
+    <style>
+        p.ex01::first-line{color:#ff0000}
+        p.ex02::before{content:url("images/ic_arrow_a.gif");}
+        /*폰트 크기 변경은 안됨*/
+        p.ex03::selection{color: #ff0000;background: gray}
+        p.ex04:hover{color:royalblue;font-size: 50px;}
+
+        img{display: none;}
+        div:hover img{
+            display: block;
+        }
+
+        form input:focus{border:2px solid red;}
+        input[type=radio]:checked{width:50px;height:50px}
+
+        /*몇번째 아이*/
+        ol li:first-child{color:red}
+        ol li:last-child{font-weight: bold;}
+        ol li:nth-child(3){background: yellow;}
+    </style>
+</head>
+<body>
+    <h1>pseudo</h1>
+    <p class="ex01">
+        첫줄을 선택하는 아이 ::first-line<br>
+        두번째 줄!!!<br>
+    </p>
+    <p class="ex02">
+        태그의 앞쪽에 어떤 내용을 추가하는 아이 ::before
+    </p>
+    <p class="ex03">
+        선택된(드래그해서 선택한 내용) 부분을 선택하는 아이 ::selection
+    </p>
+    <hr>
+    <h1>pseudo-classes</h1>
+    <p class="ex04">
+        마우스를 올렸을 때, 마우스를 요소 밖으로 뺐을 때 :hover
+    </p>
+
+    <div class="box ex05">
+        <p>마우스를 올려주세요! :hover</p>
+        <img src="images/ic_arrow_b.gif" alt="">
+    </div>
+
+    <hr>
+    <ul>
+        <li>:checked - 체크박스 같은 애들이 체크된 상태일 때</li>
+        <li>:focus - 인풋의 커서가 활성화 되어있을 때</li>
+    </ul>
+
+    <form action="">
+        <input type="text" name="name" class="ex01">
+        <fieldset>
+            <legend>포지션</legend>
+            <label><input type="radio" name="position">탑</label><br>
+            <label><input type="radio" name="position">미드</label><br>
+            <label><input type="radio" name="position">원딜</label><br>
+            <label><input type="radio" name="position">서폿</label><br>
+            <label><input type="radio" name="position">정글</label>
+        </fieldset>
+    </form>
+
+    <ol>
+        <li>1번</li>
+        <li>2번</li>
+        <li>3번</li>
+        <li>4번</li>
+        <li>5번</li>
+        <li>6번</li>
+        <li>7번</li>
+    </ol>
+</body>
+</html>

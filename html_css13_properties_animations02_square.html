@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+        div{width: 100px;height:100px;border:1px solid red; border-radius:50%;
+        position:relative;top:0;
+        animation: my_ani 1s ease-in infinite alternate}*/
+        div{width:100px;height:100px;border:3px solid rgb(0, 0, 0);background: hotpink;
+        position:relative;top:0;
+        animation: square 5s ease-in infinite}
+
+        /*
+        @keyframes my_ani {
+            0%{top:0}
+            95%{width:100px}
+            100%{top:500px; width:110px; height:90px}
+        }*/
+
+        @keyframes square {
+           0%{left:0;top:0;transform: rotate(0deg);}
+           25%{left:0;top:200px;background: indianred; transform: rotate(90deg);}
+           50%{top:200px;left:200px;background: fuchsia; transform: rotate(180deg);}
+           75%{top:0px;left:200px;background: violet; transform: rotate(270deg);}
+           100%{top:0;left:0;background: hotpink; transform: rotate(360deg);}
+        }
+    </style>
+
+</head>
+<body>
+    <div></div>
+</body>
+</html>

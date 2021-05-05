@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--form을 만들어 input태그에 focus가 되면 테두리를 빨강색으로 2px되게 만드세요
+        체크박스와 라디오 박스도 만들어서 선택되면 크기가 50px이 되게 만드세요.-->
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        form input:focus{border:2px solid red;}
+        input[type=radio]:checked{width:50px;height:50px}
+
+    </style>
+    
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" class="ex01">
+        <fieldset>
+            <legend>포지션</legend>
+            <label><input type="radio" name="position">탑</label><br>
+            <label><input type="radio" name="position">미드</label><br>
+            <label><input type="radio" name="position">원딜</label><br>
+            <label><input type="radio" name="position">서폿</label><br>
+            <label><input type="radio" name="position">정글</label>
+        </fieldset>
+    </form>
+</body>
+</html>

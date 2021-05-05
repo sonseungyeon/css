@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        div{
+            width:100px;height: 100px;background: tomato; position:absolute;top:0; left:0;
+            animation-name:my_ani;/*애니메이션 이름*/
+            animation-duration: 10s;/*진행시간*/
+            animation-delay:1s;/*딜레이시간*/
+            animation-iteration-count:infinite;/*반복횟수*/
+            animtaion-direction: alternate;/*정방향 -> 역방향, reverse, alternate-reverse*/
+        }
+        /*키프레임으로 애니메이션이 진행할 내용을 작성한다*/
+        @keyframes my_ani{
+            0%{transform: rotateY(0deg); top:0px; left:0}
+            25%{transform: rotateY(90deg); top:200px;left:0}
+            50%{transform: rotateX(90deg); top:200px;left:200px}
+            75%{transform: rotateY(180deg); top:0px;left:200px}
+        }
+
+        @keyframes your_ani{
+            from{background:red;}
+            to{background:blue;}
+        }
+    </style>
+</head>
+<body>
+    <h1>애니메이션 효과 주기</h1>
+    <div>
+
+    </div>
+</body>
+</html>
